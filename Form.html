@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey_Form</title>
+</head>
+<body>
+    <form method="get">  
+        <table>
+            <tr>
+                <td><label for="FirstName" >First Name</label></td>
+                <td>:<input type="text" id="FirstName" placeholder="FirstName"></td>
+            </tr>
+            <tr>
+                <td><label for="LastName">Last Name</label></td>
+                <td>:<input type="text" id="LastName" placeholder="LastName"></td>
+            </tr>
+            <tr>
+                <td><label for="DOB">Date of Birth</label></td>
+                <td>:<input type="date" id="DOB" ></td>
+            </tr>
+            <tr>
+                <td><label for="Country">Country</label></td>
+                <td>:<select name=" Select Country" >
+                    <option selected >--No Selection--</option>
+                    <option>India</option>
+                    <option>United Kingdom</option>
+                    <option>United State</option>
+                    <option>France</option>
+                    <option>Italy</option>
+                    <option>Spain</option>
+                    <option>Japan</option>
+                    <option>Germany</option>
+                    <option>China</option>
+                    <option>Pakistan</option>
+                    <option>Bangladesh</option>
+                    <option>Singapore</option>
+                    <option>Canada</option>
+                    <option>Netherland</option>
+                    <option>Norway</option>
+                    <option>Greece</option>
+                </select> </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>:<input type="radio" id="Male" name="Gender">
+                <label for="Male">Male</label>
+                <input type="radio" id="Female" name="Gender">
+                <label for="Female">Female</label>
+                <input type="radio" id="Transgender" name="Gender">
+                <label for="Transgender">Transgender</label></td>
+            </tr>
+            <tr>
+                <td><label for="Profession" >Profession</label></td>
+                <td>:<input type="text" id="Profession" ></td>
+            </tr>
+            <tr>
+                <td><label for="Email" >E-mail</label></td>
+                <td>:<input type="email" id="Email" ></td>
+            </tr>
+            <tr>
+                <td><label for="phone" >Phone No.</label></td>
+                <td>:<input type="tel" id="phone" pattern="[0-9]{5}-[0-9]{5}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" id="submit" value="Submit"></td>
+                <td><input type="reset" id="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
