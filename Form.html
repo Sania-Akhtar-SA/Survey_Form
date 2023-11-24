@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey_Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Alumni Sans' rel='stylesheet'>
     <link rel="stylesheet" href="Form.css">
 </head>
 <body>
-    <form method="get" class="form">  
-        <div style="width:50%; height:50px; text-align:center;"><h3>CUSTOMER SURVEY FORM</h3></div>
+    <div class="div"><p>CUSTOMER SURVEY FORM</p></div>
+    <form id="form" method="get" class="form" action="/action_page.php"> 
         <table>
-            <tr>
+            <tr class="tr">
                 <td><label for="FirstName" >First Name</label></td>
-                <td>:<input type="text" id="FirstName" placeholder="FirstName"></td>
+                <td>:<input type="text" id="FirstName" placeholder="FirstName" required></td>
             </tr>
             <tr>
                 <td><label for="LastName">Last Name</label></td>
-                <td>:<input type="text" id="LastName" placeholder="LastName"></td>
+                <td>:<input type="text" id="LastName" placeholder="LastName" required></td>
             </tr>
             <tr>
                 <td><label for="DOB">Date of Birth</label></td>
-                <td>:<input type="date" id="DOB" ></td>
+                <td>:<input type="date" id="DOB" required></td>
             </tr>
             <tr>
                 <td><label for="Country">Country</label></td>
-                <td>:<select class="select" name=" Select Country" >
+                <td>:<select name=" Select Country" >
                     <option selected >--No Selection--</option>
                     <option>India</option>
                     <option>United Kingdom</option>
@@ -46,31 +47,36 @@
             </tr>
             <tr>
                 <td>Gender</td>
-                <td>:<input type="radio" id="Male" name="Gender">
+                <td>:<input type="radio" id="Male" name="Gender" value="Male">
                 <label for="Male">Male</label>
-                <input type="radio" id="Female" name="Gender">
+                <input type="radio" id="Female" name="Gender" value="Female">
                 <label for="Female">Female</label>
-                <input type="radio" id="Transgender" name="Gender">
+                <input type="radio" id="Transgender" name="Gender" value="Transgender">
                 <label for="Transgender">Transgender</label></td>
             </tr>
             <tr>
                 <td><label for="Profession" >Profession</label></td>
-                <td>:<input type="text" id="Profession" ></td>
+                <td>:<input type="text" id="Profession" required></td>
             </tr>
             <tr>
                 <td><label for="Email" >E-mail</label></td>
-                <td>:<input type="email" id="Email" ></td>
+                <td>:<input type="email" id="Email" required></td>
             </tr>
             <tr>
                 <td><label for="phone" >Phone No.</label></td>
-                <td>:<input type="tel" id="phone" pattern="[0-9]{5}-[0-9]{5}"></td>
+                <td>:<input type="tel" id="phone" pattern="[0-9]{10}" required></td>
             </tr>
             <tr>
-                <td><input class="button" type="submit" id="submit" value="Submit"></td>
+                <td><input class="button" type="button" id="submit" value="Submit" onclick="myValues()"></td>
                 <td><input class="button" type="reset" id="reset" value="Reset"></td>
             </tr>
+            <!-- <tr>
+                <td><button onclick="myValues()">Try it</button></td>
+                <td><p id="demo"></p></td>
+            </tr> -->
         </table>
     </form>
+    
     <script src="Form.js"></script>
 </body>
 </html>
