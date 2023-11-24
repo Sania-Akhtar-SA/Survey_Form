@@ -1,4 +1,5 @@
-
+let lables = document.querySelectorAll('label');
+let arr = Array.from(lables);
 function myValues() {
     var x = document.getElementById("form");
     var txt = "";
@@ -8,7 +9,7 @@ function myValues() {
         if(i==4||i==5||i==6){ 
             continue;
         }
-      txt = txt + x.elements[i].value + "\n";
+      txt =txt + arr[i].innerHTML + ":" + x.elements[i].value + "\n";
     }
     if(document.getElementById("submit").innerHTML =confirm(txt)){
         text = "Form Submitted Successfull";
